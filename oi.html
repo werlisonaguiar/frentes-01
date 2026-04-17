@@ -1,0 +1,16 @@
+$i=1; Get-ChildItem *.jpg | ForEach-Object {
+    Rename-Item $_ -NewName ("{0:D2}.jpg" -f $i)
+    $i++
+}
+
+$i=1; Get-ChildItem *.png| ForEach-Object {
+    Rename-Item $_ -NewName ("0{0:D2}.png" -f $i)
+    $i++
+}
+
+$i=1; Get-ChildItem *.png| ForEach-Object {
+    Rename-Item $_ -NewName ("{0:D2}.png" -f $i)
+    $i++
+}
+
+
